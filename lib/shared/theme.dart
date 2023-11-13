@@ -1,6 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+// Responsive
+double maxWidthScreen(BuildContext context) =>
+    MediaQuery.of(context).size.width;
+
+double maxHeightScreen(BuildContext context) =>
+    MediaQuery.of(context).size.height;
+
+double textScaleFactorScreen(BuildContext context) =>
+    MediaQuery.of(context).textScaleFactor;
+
 // Warna
 Color kPrimaryColor = const Color(0xFF5C40CC);
 Color kBlackColor = const Color(0xFF1F1449);

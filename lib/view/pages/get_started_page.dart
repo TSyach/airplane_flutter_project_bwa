@@ -6,9 +6,9 @@ class GetStartedPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final widthScreen = MediaQuery.of(context).size.width;
-    final heightScreen = MediaQuery.of(context).size.height;
-    final textScaleFactor = MediaQuery.of(context).textScaleFactor;
+    final widthScreen = maxWidthScreen(context);
+    final heightScreen = maxHeightScreen(context);
+    final textScaleFactor = textScaleFactorScreen(context);
     return Scaffold(
       body: Stack(
         alignment: Alignment.bottomCenter,

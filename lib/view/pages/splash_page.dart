@@ -6,6 +6,10 @@ class SplashPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final widthScreen = maxWidthScreen(context);
+    final heightScreen = maxHeightScreen(context);
+    final textScaleFactor = textScaleFactorScreen(context);
+
     return Scaffold(
       backgroundColor: kPrimaryColor,
       body: Center(
@@ -13,9 +17,9 @@ class SplashPage extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Container(
-              width: 100,
-              height: 100,
-              margin: const EdgeInsets.only(bottom: 50),
+              width: widthScreen * 0.3,
+              height: heightScreen * 0.15,
+              margin: EdgeInsets.only(bottom: 50 * textScaleFactor),
               decoration: const BoxDecoration(
                 image: DecorationImage(
                   image: AssetImage('assets/icons/icon_plane.png'),
@@ -26,8 +30,8 @@ class SplashPage extends StatelessWidget {
               'AIRPLAN',
               style: whiteTextStyle.copyWith(
                 fontWeight: medium,
-                fontSize: 32,
-                letterSpacing: 10,
+                fontSize: 32 * textScaleFactor,
+                letterSpacing: 10 * textScaleFactor,
               ),
             )
           ],

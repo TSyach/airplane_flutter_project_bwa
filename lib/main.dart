@@ -14,7 +14,7 @@ class AirPortMobile extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: GetStartedPage(),
+      home: SplashPage(),
     );
   }
 }
