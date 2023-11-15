@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+// Default Value
+const defaultMargin = 24.0;
+const defaultBorderRadius = 17.0;
+
 // Responsive
 double maxWidthScreen(BuildContext context) =>
     MediaQuery.of(context).size.width;
