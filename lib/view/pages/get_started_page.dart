@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 import '../../shared/theme.dart';
 
 class GetStartedPage extends StatelessWidget {
@@ -51,7 +52,7 @@ class GetStartedPage extends StatelessWidget {
                 margin: EdgeInsets.only(
                     top: 50 * textScaleFactor, bottom: 80 * textScaleFactor),
                 child: TextButton(
-                  onPressed: () => {},
+                  onPressed: () => {Navigator.pushNamed(context, '/sign-up')},
                   style: TextButton.styleFrom(
                     backgroundColor: kPrimaryColor,
                     shape: RoundedRectangleBorder(
