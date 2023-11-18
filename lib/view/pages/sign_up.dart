@@ -1,6 +1,4 @@
-import 'package:airplane_flutter_project_bwa/shared/input.dart';
 import 'package:flutter/material.dart';
-import '../../shared/submit_button.dart';
 import '../../shared/theme.dart';
 
 class SignUpPage extends StatelessWidget {
@@ -23,6 +21,77 @@ class SignUpPage extends StatelessWidget {
   }
 
   Widget inputSection(double textScaleFactor) {
+    Widget input({
+      required String label,
+      bool? secureText,
+      required double textScaleFactor,
+    }) {
+      Widget labelSection() {
+        return Text(
+          label,
+          style: blackTextStyle.copyWith(fontSize: 14 * textScaleFactor),
+        );
+      }
+
+      Widget inputSection() {
+        return TextFormField(
+          cursorColor: kBlackColor,
+          obscureText: secureText ?? false,
+          decoration: InputDecoration(
+            hintText: label,
+            border: OutlineInputBorder(
+              borderRadius:
+                  BorderRadius.circular(defaultBorderRadius * textScaleFactor),
+            ),
+            focusedBorder: OutlineInputBorder(
+              borderRadius:
+                  BorderRadius.circular(defaultBorderRadius * textScaleFactor),
+              borderSide: BorderSide(
+                color: kPrimaryColor,
+              ),
+            ),
+          ),
+        );
+      }
+
+      return Container(
+        margin: EdgeInsets.only(bottom: 20 * textScaleFactor),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            labelSection(),
+            SizedBox(
+              height: 6 * textScaleFactor,
+            ),
+            inputSection(),
+          ],
+        ),
+      );
+    }
+
+    Widget submitButton({required double textScaleFactor}) {
+      return SizedBox(
+        height: 55 * textScaleFactor,
+        width: double.infinity,
+        child: TextButton(
+          onPressed: () {},
+          style: TextButton.styleFrom(
+              backgroundColor: kPrimaryColor,
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(
+                    defaultBorderRadius * textScaleFactor),
+              )),
+          child: Text(
+            'Get Started',
+            style: whiteTextStyle.copyWith(
+              fontSize: 18 * textScaleFactor,
+              fontWeight: medium,
+            ),
+          ),
+        ),
+      );
+    }
+
     return Container(
       margin: EdgeInsets.symmetric(horizontal: defaultMargin * textScaleFactor),
       padding: EdgeInsets.symmetric(
@@ -65,6 +134,7 @@ class SignUpPage extends StatelessWidget {
         top: 50 * textScaleFactor,
         left: 100 * textScaleFactor,
         right: 100 * textScaleFactor,
+        bottom: 73 * textScaleFactor,
       ),
       child: TextButton(
         onPressed: () {},
