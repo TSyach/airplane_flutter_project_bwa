@@ -1,3 +1,4 @@
+import 'package:airplane_flutter_project_bwa/shared/small_button.dart';
 import 'package:flutter/material.dart';
 
 import '../../shared/theme.dart';
@@ -46,28 +47,9 @@ class GetStartedPage extends StatelessWidget {
                 ),
                 textAlign: TextAlign.center,
               ),
-              Container(
-                width: widthScreen * 0.5,
-                height: heightScreen * 0.07,
-                margin: EdgeInsets.only(
-                    top: 50 * textScaleFactor, bottom: 80 * textScaleFactor),
-                child: TextButton(
-                  onPressed: () => {Navigator.pushNamed(context, '/sign-up')},
-                  style: TextButton.styleFrom(
-                    backgroundColor: kPrimaryColor,
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(
-                          defaultBorderRadius * textScaleFactor),
-                    ),
-                  ),
-                  child: Text(
-                    'Get Started',
-                    style: whiteTextStyle.copyWith(
-                      fontSize: 18 * textScaleFactor,
-                      fontWeight: medium,
-                    ),
-                  ),
-                ),
+              smallButton(
+                function: () => {Navigator.pushNamed(context, '/sign-up')},
+                label: 'Get Started',
               ),
             ],
           )
