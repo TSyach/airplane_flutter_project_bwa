@@ -1,3 +1,5 @@
+import 'package:airplane_flutter_project_bwa/view/pages/bonus.dart';
+
 import 'view/pages/get_started_page.dart';
 import 'view/pages/sign_up.dart';
 import 'package:flutter/material.dart';
@@ -19,6 +21,7 @@ class AirPortMobile extends StatelessWidget {
         '/': (context) => const SplashPage(),
         '/get-started': (context) => const GetStartedPage(),
         '/sign-up': (context) => const SignUpPage(),
+        '/bonus': (context) => const BonusPage(),
       },
     );
   }
