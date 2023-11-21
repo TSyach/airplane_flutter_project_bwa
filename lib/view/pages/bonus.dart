@@ -9,24 +9,27 @@ class BonusPage extends StatelessWidget {
   Widget build(BuildContext context) {
     Widget bonusCard() {
       Widget userName() {
-        return Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text(
-              'Name',
-              style: whiteTextStyle.copyWith(
-                fontSize: 14,
-                fontWeight: light,
+        return Expanded(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                'Name',
+                style: whiteTextStyle.copyWith(
+                  fontSize: 14,
+                  fontWeight: light,
+                ),
               ),
-            ),
-            Text(
-              'Kezia Anne',
-              style: whiteTextStyle.copyWith(
-                fontSize: 20 * textScaleFactorScreen(context),
-                fontWeight: medium,
-              ),
-            )
-          ],
+              Text(
+                'Kezia Anne',
+                style: whiteTextStyle.copyWith(
+                  fontSize: 20 * textScaleFactorScreen(context),
+                  fontWeight: medium,
+                ),
+                overflow: TextOverflow.ellipsis,
+              )
+            ],
+          ),
         );
       }
 
@@ -83,6 +86,9 @@ class BonusPage extends StatelessWidget {
       return Container(
         width: 300 * textScaleFactorScreen(context),
         height: 200 * textScaleFactorScreen(context),
+        margin: EdgeInsets.only(
+          top: 80 * textScaleFactorScreen(context),
+        ),
         padding: EdgeInsets.all(
           defaultMargin * textScaleFactorScreen(context),
         ),
